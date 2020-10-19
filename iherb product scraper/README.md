@@ -90,13 +90,17 @@ time_of_action - action_performed
 
 <hr>
 
-## iherb Scraper v2
+## iherb Update 1
 
 This has script has an additional functionality of updating already fetched products in a CSV file on demand. It also maintains a file <code>last_index.txt</code> which stores the last fetched product index in CSV file to skip the already updated records. 
 
 **Note:** : To updated from start, delete the last_index.txt file if made by the script from previous runs.
 
 <hr>
+
+## iherb Update 2
+
+There were some collapsing issues with CSV file due to huge text data in <code>product_description</code>. So, to solve that, run <code>utility.py</code> on the already fetched CSV file and it will format all the cells to fit the width of the <code>product_description</code>. The output is a xlsx file named <code>final_product_details.xlsx</code> with no issues.
 
 **Note:**
 In case you are getting unreadable and jibberish characters in csv, that's because excel uses different encoding than the data fetched. To convert the output excel file into UTF-8 encoding, follow the following steps:

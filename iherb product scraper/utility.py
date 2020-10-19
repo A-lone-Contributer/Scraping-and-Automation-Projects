@@ -1,4 +1,5 @@
 import os
+from os import listdir
 
 import openpyxl
 import pandas as pd
@@ -12,7 +13,7 @@ def csv_to_xlsx():
     read_file.to_excel('product_details.xlsx', index=None, header=True)
 
 
-def xlxs_width_formatter():
+def xlsx_width_formatter():
     workbook = openpyxl.load_workbook("product_details.xlsx")
 
     worksheet = workbook["Sheet1"]
@@ -30,13 +31,13 @@ def xlxs_width_formatter():
     workbook.save(filename='final_product_details.xlsx')
 
 
-def csv_from_excel():
-    read_file = pd.read_excel('final_product_details.xlsx')
-    read_file.to_csv('Final.csv', index=False, float_format='%.0f', encoding='utf-8')
-
-
 if not os.path.exists('final_product_details.xlsx'):
     csv_to_xlsx()
-    xlxs_width_formatter()
-csv_from_excel()
+    xlsx_width_formatter()
+ 
+
+for file_name in listdir():
+    if file_name == 'product_details.xlsx':
+        os.remove(file_name)
+        
 print("Formatting complete!")

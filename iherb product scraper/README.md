@@ -5,13 +5,11 @@ iherb-scraper is a scraper that scrapes iherb.com for product details
 
 ## Requirements
 
-1. **Chrome version 84**
+1. **Chrome version 86**
 
-If you have any other version (83 or 85) then download the respective ChromeDriver using the following links:	
+If you have any other version of chrome then you can download the respective ChromeDriver using the following link:
 
-> Chromedriver v83: https://chromedriver.storage.googleapis.com/index.html?path=83.0.4103.39/	
-
-> Chromedriver v85: https://chromedriver.storage.googleapis.com/index.html?path=85.0.4183.87/	
+**Chromedriver** : https://chromedriver.chromium.org/downloads
 
 2. **Python 3** 	
 
